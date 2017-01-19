@@ -1,0 +1,408 @@
+@font-face {
+	font-family: 'Swiss EX';
+	src: url('../fonts/swis721_ex_bt_roman.eot');
+	src: url('../fonts/swis721-ex-bt-roman.ttf') format('truetype'),
+		 url('../fonts/swis721-ex-bt-roman.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Swiss LT';
+	src: url('../fonts/swis721_lt_bt_light.eot');
+	src: url('../fonts/swis721-lt-bt-light.ttf') format('truetype'),
+		 url('../fonts/swis721-lt-bt-light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html{
+	height:100vh!important;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	background-color: white;
+	font-family: 'Swiss LT'!important;
+	width: 99.9vw;
+	height:100vh!important;
+}
+
+#body_accueil{
+	overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	font-family: 'Swiss LT'!important;
+}
+
+.total{
+	display: flex;
+	justify-content: center;
+}
+.cut-marge{
+	padding-right: 10px!important;
+	padding-left: 10px!important;
+	z-index:999;
+}
+
+.logo{
+	max-width: 108px!important;
+	max-height:108px!important;
+	width:100%;
+	height:100%;
+}
+
+.logo_fournisseur{
+	max-width: 450px!important;
+	max-height:70px!important;
+	width:100%!important;
+	height:100%;
+}
+
+.common_hover{
+	margin : 0px 0px 0px 0px;
+	padding : 0px 0px 0px 0px;
+}
+
+.seul{
+	width:99.999vw!important;
+}
+
+.duo{
+	width:49.9999vw!important;
+}
+
+.trio{
+	width:33.319999vw!important;
+}
+
+.quatuor{
+	width:24.99999vw!important;
+}
+
+.quintet{
+	width:19.99999vw!important;
+}
+
+.height_important{
+	height:100%!important;
+}
+
+.increment_1{
+	left:0px;
+}
+
+.increment_deux_1{
+	left:0vw;
+}
+
+.increment_deux_2{
+	left:50vw;
+}
+
+.increment_trois_1{
+	left:0vw;
+}
+
+.increment_trois_2{
+	left:33.32vw;
+}
+
+.increment_trois_3{
+	left:66.64vw;
+}
+
+.increment_quatre_1{
+	left:0vw;
+}
+
+.increment_quatre_2{
+	left:25vw;
+}
+
+.increment_quatre_3{
+	left:50vw;
+}
+
+.increment_quatre_4{
+	left:50vw;
+}
+
+.increment_cinq_1{
+	left:0vw;
+}
+
+.increment_cinq_2{
+	left:20vw;
+}
+
+.increment_cinq_3{
+	left:40vw;
+}
+
+.increment_cinq_4{
+	left:60vw;
+}
+
+.increment_cinq_5{
+	left:80vw;
+}
+
+div.click{
+	position:absolute;
+	height:100vh;
+}
+
+div.click > .clickable {
+    position:absolute;
+    width:100%;
+    height:100vh;
+    top:0;
+    left:0;
+    text-decoration:none; /* Makes sure the link   doesn't get underlined */
+    z-index:10; /* raises anchor tag above everything else in div */
+    background-color:white; /*workaround to make clickable in IE */
+    opacity: 0; /*workaround to make clickable in IE */
+    filter: alpha(opacity=1); /*workaround to make clickable in IE */
+}
+
+
+.red-admin{
+	background-color: rgba(255,0,0,0.5)!important;
+	text-align: center;
+}
+
+.form-holder {
+	background: rgba(255,255,255,0.2);
+	margin-top: 10%;
+	border-radius: 3px;
+}
+
+.form-holder-connexion{
+	margin-top: 200px;
+}
+
+.marge{
+	margin-top:300px!important;
+}
+
+.form-head {
+	font-size: 30px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: black;
+	text-shadow: 0 0 30px #000;
+	margin: 15px auto 30px auto;
+}
+
+.ui.menu .menu div{
+	width:150px;
+}
+
+.ui.menu .menu div a{
+	color:black;
+}
+
+
+.flex-contain{
+	display: flex!important;
+}
+
+.flex-centered{
+	display: flex;
+	align-items: center;
+}
+
+.equipe-container{
+	background-color: rgba(64,64,64,1.0)!important;
+	color:white!important;
+}
+
+.white-color{
+	color:white!important;
+}
+
+.centered{
+	text-align:center!important;
+}
+
+.references-container{
+	padding-left:30px;
+	padding-right:30px;
+	width:100%!important;
+	margin-left:10px;
+	margin-right: 10px;
+}
+
+.mid{
+	margin-top: 10%;
+}
+
+.swiper-container{
+	width:100%!important;
+	height:300px!important;
+}
+
+.cinquo{
+	width :20%;
+	text-align: justify;
+	display: flex!important;
+	padding-left: 0px!important;
+	padding-right: 0px!important;
+	flex-direction: column;
+	transition-duration: 0.5s;
+	transition-property: width;
+	z-index:1;
+}
+
+.diaporama{
+	width: 75vw!important;
+	height: 40vh!important;
+}
+
+.centered_text{
+	text-align: center;
+}
+
+.hovered_content{
+	display: none;
+	color:white;
+	background-color: rgba(64,64,64,1.0);
+	z-index:2;
+	width: 99.9vw!important;
+	height: 99.9vh!important;
+}
+
+.hovered_content_telechargement{
+	display: none;
+	color:white;
+	background-color: rgba(64,64,64,1.0);
+	z-index:2;
+	width: 20vw!important;
+	height: 100vh!important;
+}
+
+.hovered_content_index{
+	display: none;
+	z-index:1;
+	position:relative;
+}
+
+
+.alignement_index{
+	margin:auto!important;
+	width: 45%;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+}
+
+.paragraphe{
+	margin:auto!important;
+	background-color: rgba(255,255,255,0.75);
+	width:100%;
+}
+
+.paragraphe_accueil{
+	margin-top: 44vh!important;
+}
+
+.align{
+	text-align: center;
+}
+
+.alignement{
+	width:100%!important;
+}
+
+.flex-contain{
+	display: flex;
+}
+
+.align-vertical{
+	margin: auto;
+}
+
+.remember-me {
+	text-align: left;
+}
+
+.ui.checkbox label {
+	color: #ddd;
+}
+
+.ui.grid.main{
+	margin-top: 70px;
+}
+
+.active_special{
+	background-color : rgba(0,0,0,0.8)!important;
+}
+
+.active_special a{
+	color : white!important;
+}
+
+.mobile.row{
+	padding-top: 0px !important;
+	margin-top: 0px !important;
+}
+
+.mobile.row .ui.inverted.menu{
+	border-radius: 0px !important;
+}
+
+.padding-reset{
+	padding: 0px !important;
+}
+
+.ui.message{
+	padding: 40px !important;
+}
+
+@media (max-width: 767px) {
+	.ui.grid.main{
+		margin-top: 70px;
+	}
+
+.ui.grid { margin: 0 !important; }
+	.ui.vertical.menu.navbar{
+		margin-top: 0px !important;
+	}
+}
+
+.ui.vertical.menu{
+	margin-top: -15px !important;
+	width: 100%;
+	display: none;
+}
+
+.swiper-button-next{
+	-webkit-filter: grayscale(50%) brightness(500%) brightness(50%)!important; 
+  	filter: grayscale(50%) brightness(500%) brightness(50%)!important; 
+}
+
+.swiper-button-prev{
+	-webkit-filter: grayscale(50%) brightness(500%) brightness(50%)!important; 
+  	filter: grayscale(50%) brightness(500%) brightness(50%)!important; 
+}
+
+.connexion{
+	width: 37,5%!important;
+}
+
+@media only screen and (max-width: 1060px){
+	.div_menu{
+		width:100px!important;
+	}
+
+
+	.connexion{
+		width: 100%!important;
+	}
+
+	.menu-adaptive{
+		font-size: 10px;
+	}
+}
