@@ -67,14 +67,13 @@ function ReadFolderDirectoryMyVersion($dir = "./Les simpsons l'integrale")
 				foreach ($saisons as $nom => $saison) {
 					uksort($saison, "strnatcmp");
 					echo '
-						<div class="item">'.$nom.'
+						<div class="item">
+							<span class="text">'.$nom.'</span>
 							<div class="menu">
 						    ';
 					foreach ($saison as $episode) {
 						if(substr($episode, -5) === '.webm' || substr($episode, -4) === '.mp4'){
-							echo'	<div class="item pasassezgrand">
-								  		'.$episode.'
-									</div>';
+							echo'	<div class="item pasassezgrand">'.$episode.'</div>';
 						}
 					}
 					echo '	 </div>
@@ -89,14 +88,28 @@ function ReadFolderDirectoryMyVersion($dir = "./Les simpsons l'integrale")
 
 		?>
 			</div>
+			<video style="margin-left: auto;margin-right: auto;" class="video-js vjs-default-skin" controls preload="none" width="1200" height="800"
+      data-setup="{}">
+        <source class="video-source" src="" type="video/webm" />
+    </video>
+
 		</div>
 	</div>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
 	<script type="text/javascript">
 		$('.ui.dropdown')
-		  .dropdown()
+			.dropdown({
+				action: 'nothing'
+			})
 		;
+		$('.pasassezgrand').click(function(){
+			$episode = (this.innerHTML).split(".");
+			$(".video-source").attr('src', "./"+(((($(this).parent()).parent()).parent()).siblings(".text"))[0].innerText+"/"+(($(this).parent()).siblings(".text"))[0].innerHTML+"/"+this.innerHTML);
+			$(".video-source").attr('type', "video/"+$episode[$episode.length-1]);	
+			$(".video-js")[0].load();
+		});
+		
 	</script>
 	</body>
 	</html>
